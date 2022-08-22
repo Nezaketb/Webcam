@@ -22,7 +22,7 @@ environment:
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
-# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# consider running `flutter pub upgrade --major-versions`. Alternatively,flutterfire configure
 # dependencies can be manually updated by changing the version numbers below to
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
@@ -36,6 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   image_picker: ^0.8.5+3
   realm: ^0.3.2+beta
+  realm_dart: ^0.3.2+beta
+  firebase_core: ^1.21.0
+  firebase_database: ^9.1.2
 
 dev_dependencies:
   flutter_test:

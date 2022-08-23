@@ -1,41 +1,34 @@
 {
   "project_info": {
-    "project_number": "634501022501",
-    "project_id": "webcamera-748a5",
-    "storage_bucket": "webcamera-748a5.appspot.com"
+    "project_number": "606045125935",
+    "project_id": "webcamera-36e58",
+    "storage_bucket": "webcamera-36e58.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:634501022501:android:ef90cbbe0463eb7a5a90cc",
+        "mobilesdk_app_id": "1:606045125935:android:2c38f893c5550ecac2f5da",
         "android_client_info": {
           "package_name": "com.example.webcamera"
         }
       },
       "oauth_client": [
         {
-          "client_id": "634501022501-i1thlgt57juf1e6mppcbvr4ct247gh1v.apps.googleusercontent.com",
+          "client_id": "606045125935-ee3h5tnisn9vo663c6ff87t8cou6ect7.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAMF7FfcfjxP63ZaUpgBxw84flmvrHIRF0"
+          "current_key": "AIzaSyAAkFVh4zh493X89fg1G_WcBwRyFLg16NQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "634501022501-i1thlgt57juf1e6mppcbvr4ct247gh1v.apps.googleusercontent.com",
+              "client_id": "606045125935-ee3h5tnisn9vo663c6ff87t8cou6ect7.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "634501022501-8pens9j01798rj7ibqnon78r7sb3k1il.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.webcamera"
-              }
             }
           ]
         }

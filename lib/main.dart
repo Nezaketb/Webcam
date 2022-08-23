@@ -1,18 +1,22 @@
+import 'dart:convert';
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'dart:io';
+import 'dart:io' as Io;
+// import 'package:firebase_core/firebase_core.dart';
 import 'package:realm/realm.dart';
-import 'package:realm_dart/realm.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
 
-
+import 'Entities/Files.dart';
+// import 'firebase_options.dart';
+// import 'package:firebase_storage/firebase_storage.dart';
 
 void main() async{
-
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp(
+  //   options: DefaultFirebaseOptions.currentPlatform,
+  //   name: 'webcamera',
+  // );
 
   runApp(const MyApp());
 }
@@ -59,18 +63,46 @@ class MyHomePage extends StatefulWidget {
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
-File? imageFile;
+Io.File? imageFile;
+class GetImagesFromDb{
+  Io.File getFiles() {
+    var config = Configuration([Files.schema], readOnly: false, inMemory: false);
+    var realm = Realm(config);
+    var FileList =  realm.all<Files>();
 
+    List<Io.File> ImageList = <Io.File>[];
+    FileList.forEach((element) {
+      Uint8List rawPath = base64Decode(element.Photo.toString());
+      ImageList.add(
+        Io.File.fromRawPath(rawPath)
+      );
+    });
+    Uint8List rawPath = base64Decode(FileList.first.Photo.toString());
+    return Io.File.fromRawPath(rawPath);
+  }
+}
 class _MyHomePageState extends State<MyHomePage> {
 
   void _openCamera() async {
     var picture=await ImagePicker().pickImage(source: ImageSource.camera);
     setState(() {
-      imageFile =File(picture!.path);
+      imageFile =Io.File(picture!.path);
     });
+    var config = Configuration([Files.schema], readOnly: false, inMemory: false);
+    var realm = Realm(config);
+    List<int> imageBytes = imageFile?.readAsBytesSync() as List<int>;
+    String img64 = base64Encode(imageBytes);
+    String? ExtensionFile = ".jgp";
+    String? MimeTypeFile   = picture?.mimeType.toString();
+    var ImageData = Files(img64, Extension: ExtensionFile, MimeType: MimeTypeFile );
+     realm.write(() {
+       realm.add(ImageData);
+     });
+    // Reference ref=FirebaseStorage.instance.ref().child("user").child("image").child("image.png");
+    // UploadTask uploadTask= ref.putFile(imageFile!);
   }
 
-  @override
+    @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -88,8 +120,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPrimary: Colors.orange,
                 ),),
           Expanded (
-            child: imageFile==null?
-            Text("Resim Yok"): Image.file(imageFile!),)
+              child: imageFile == null ?
+              Text("Fotoğraf Yok"): Image.file(GetImagesFromDb().getFiles()),
+          )
+            // child: imageFile==null?
+            // Text("Resim Yok"): Image.file(imageFile!),)
             ],
           ),
         ),

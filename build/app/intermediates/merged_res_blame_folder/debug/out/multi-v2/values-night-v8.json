@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\YAZILIM\\Projeler\\Webcam\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "C:\\OpenCV\\webcam\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "D:\\YAZILIM\\Projeler\\Webcam\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "C:\\OpenCV\\webcam\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

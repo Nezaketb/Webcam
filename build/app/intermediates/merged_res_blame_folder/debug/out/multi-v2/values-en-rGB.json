@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\YAZILIM\\Projeler\\Webcam\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rGB\\values-en-rGB.xml",
+            "outputFile": "C:\\OpenCV\\webcam\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rGB\\values-en-rGB.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\GÜNEŞ\\.gradle\\caches\\transforms-3\\d363e3b5616f580c766e3e2b3c05f27d\\transformed\\core-1.8.0\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "source": "C:\\Users\\LenovA\\.gradle\\caches\\transforms-3\\dc1d0ca60c951869402840a70ebc9ca1\\transformed\\core-1.8.0\\res\\values-en-rGB\\values-en-rGB.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

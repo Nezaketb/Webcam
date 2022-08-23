@@ -7,14 +7,14 @@ packages:
       name: _fe_analyzer_shared
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "46.0.0"
+    version: "38.0.0"
   analyzer:
     dependency: transitive
     description:
       name: analyzer
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.6.0"
+    version: "3.4.1"
   args:
     dependency: transitive
     description:
@@ -189,7 +189,7 @@ packages:
       name: ffi
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.1"
+    version: "1.2.1"
   file:
     dependency: transitive
     description:
@@ -197,48 +197,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.1.4"
-  firebase_core:
-    dependency: "direct main"
-    description:
-      name: firebase_core
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.21.0"
-  firebase_core_platform_interface:
-    dependency: transitive
-    description:
-      name: firebase_core_platform_interface
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.5.0"
-  firebase_core_web:
-    dependency: transitive
-    description:
-      name: firebase_core_web
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.7.1"
-  firebase_database:
-    dependency: "direct main"
-    description:
-      name: firebase_database
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "9.1.2"
-  firebase_database_platform_interface:
-    dependency: transitive
-    description:
-      name: firebase_database_platform_interface
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.2.2+2"
-  firebase_database_web:
-    dependency: transitive
-    description:
-      name: firebase_database_web
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.2.1+4"
   fixnum:
     dependency: transitive
     description:
@@ -415,13 +373,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
-  objectid:
-    dependency: transitive
-    description:
-      name: objectid
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.0"
   package_config:
     dependency: transitive
     description:
@@ -470,35 +421,21 @@ packages:
       name: realm
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.3.2+beta"
+    version: "0.2.1+alpha"
   realm_common:
     dependency: transitive
     description:
       name: realm_common
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.3.2+beta"
-  realm_dart:
-    dependency: "direct main"
-    description:
-      name: realm_dart
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.3.2+beta"
+    version: "0.2.1+alpha"
   realm_generator:
     dependency: transitive
     description:
       name: realm_generator
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.3.2+beta"
-  sane_uuid:
-    dependency: transitive
-    description:
-      name: sane_uuid
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.0-alpha.4"
+    version: "0.2.1+alpha"
   shelf:
     dependency: transitive
     description:
@@ -625,4 +562,4 @@ packages:
     version: "3.1.1"
 sdks:
   dart: ">=2.17.6 <3.0.0"
-  flutter: ">=3.0.0"
+  flutter: ">=2.8.0"

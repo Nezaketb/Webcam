@@ -1,4 +1,4 @@
-#Fri Aug 19 17:39:32 TRT 2022
-base.0=D\:\\YAZILIM\\Projeler\\Webcam\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Tue Aug 23 15:50:59 TRT 2022
+base.0=C\:\\OpenCV\\webcam\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

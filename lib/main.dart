@@ -101,8 +101,28 @@ class _MyHomePageState extends State<MyHomePage> {
     // Reference ref=FirebaseStorage.instance.ref().child("user").child("image").child("image.png");
     // UploadTask uploadTask= ref.putFile(imageFile!);
   }
+  void _opengallery() async {
+    var picture=await ImagePicker().pickImage(source: ImageSource.gallery);
+    setState(() {
+      imageFile =Io.File(picture!.path);
+    });
+    var config = Configuration([Files.schema], readOnly: false, inMemory: false);
+    var realm = Realm(config);
+    List<int> imageBytes = imageFile?.readAsBytesSync() as List<int>;
+    String img64 = base64Encode(imageBytes);
+    String? ExtensionFile = ".jgp";
+    String? MimeTypeFile   = picture?.mimeType.toString();
+    var ImageData = Files(img64, Extension: ExtensionFile, MimeType: MimeTypeFile );
+    realm.write(() {
+      realm.add(ImageData);
+    });
+    // Reference ref=FirebaseStorage.instance.ref().child("user").child("image").child("image.png");
+    // UploadTask uploadTask= ref.putFile(imageFile!);
+  }
 
-    @override
+
+
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -119,9 +139,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   primary: Colors.white,
                   onPrimary: Colors.orange,
                 ),),
+              ElevatedButton(
+                onPressed:_opengallery, child:Text("Galeriden Resim Yükleme"),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.white,
+                  onPrimary: Colors.orange,
+                ),),
           Expanded (
               child: imageFile == null ?
-              Text("Fotoğraf Yok"): Image.file(GetImagesFromDb().getFiles()),
+              Text("Fotoğraf Yok"): Image.file(imageFile!),
           )
             // child: imageFile==null?
             // Text("Resim Yok"): Image.file(imageFile!),)
